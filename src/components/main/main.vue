@@ -41,7 +41,7 @@
               <Icon type="ios-contact" style="color:#fff;margin-right:5px;" size="75" />
             </div>
             <div class="user-name" style="color:#fff; text-align:center; font-size:15px;">
-              <p>蔡敏波</p>
+              <p>杨沐</p>
             </div>
             <div class="account-btn" style="text-align:center;">
               <Button type="primary" style="background-color:#faa046;border-radius:12px;">Account</Button>

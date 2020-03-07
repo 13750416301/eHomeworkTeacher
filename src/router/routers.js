@@ -124,70 +124,21 @@ export default [
   },
   {
     path: '/homework',
-    name: '个人作业',
+    name: '作业统计',
     meta: {
       icon: 'ios-book',
-      title: '个人作业'
+      title: '作业统计'
     },
     component: Main,
     children: [
       {
         path: 'homework',
-        name: '个人作业',
+        name: '作业统计',
         meta: {
           icon: 'ios-book',
-          title: '个人作业'
+          title: '作业统计'
         },
         component: () => import('@/view/homework/homework.vue')
-      },
-      {
-        path: 'homeworkDetail',
-        name: '作业详情',
-        meta: {
-          hideInBread: true,
-          hideInMenu: true
-        },
-        component: () => import('@/view/homework/homeworkDetail.vue')
-      }
-    ]
-  },
-  {
-    path: '/note',
-    name: '笔记',
-    meta: {
-      icon: 'ios-create',
-      title: '笔记'
-    },
-    component: Main,
-    children: [
-      {
-        path: 'note',
-        name: '笔记',
-        meta: {
-          icon: 'ios-create',
-          title: '笔记'
-        },
-        component: () => import('@/view/note/note.vue')
-      }
-    ]
-  },
-  {
-    path: '/favor',
-    name: '收藏',
-    meta: {
-      icon: 'ios-star',
-      title: '收藏'
-    },
-    component: Main,
-    children: [
-      {
-        path: 'favor',
-        name: '收藏',
-        meta: {
-          icon: 'ios-star',
-          title: '收藏'
-        },
-        component: () => import('@/view/favor/favor.vue')
       }
     ]
   },
