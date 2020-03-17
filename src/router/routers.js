@@ -139,6 +139,33 @@ export default [
           title: '作业统计'
         },
         component: () => import('@/view/homework/homework.vue')
+      },
+      {
+        path: 'homeworkDetail',
+        name: '作业详情',
+        meta: {
+          hideInBread: true,
+          hideInMenu: true
+        },
+        component: () => import('@/view/homework/homeworkDetail.vue')
+      },
+      {
+        path: 'homeworkStatis',
+        name: '统计详情详情',
+        meta: {
+          hideInBread: true,
+          hideInMenu: true
+        },
+        component: () => import('@/view/homework/homeworkStatis.vue')
+      },
+      {
+        path: 'homeworkPublish',
+        name: '发布作业',
+        meta: {
+          hideInBread: true,
+          hideInMenu: true
+        },
+        component: () => import('@/view/homework/homeworkPublish.vue')
       }
     ]
   },

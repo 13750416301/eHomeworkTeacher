@@ -1,59 +1,7 @@
 <template>
   <div class="homework">
-    <h1 style="color:#2d8cf0;margin:10px 0;">个人作业</h1>
-    <Tabs class="homework-tab" value="info" type="line">
-        <TabPane class="infoTab" :label="label" name="info">
-            <Table class="homework-table" border :columns="homeworkColumns" :data="homeworkData" :height="500"></Table>
-        </TabPane>
-        <TabPane label="已完成" name="avator">
-          <Table class="homework-table" border :columns="homeworkColumns" :data="homeworkData" :height="500"></Table>
-          </TabPane>
-        <TabPane label="未完成" name="password">
-          <Table class="homework-table" border :columns="homeworkColumns" :data="homeworkData" :height="500"></Table>
-        </TabPane>
-        <TabPane label="已结束" name="loginLog">
-          <Table class="homework-table" border :columns="homeworkColumns" :data="homeworkData" :height="500"></Table>
-        </TabPane>
-    </Tabs>
-    <Modal class="modal" v-model="isEmail">
-      <div slot="header" class="modal-head">
-        <div>修改邮箱地址</div>
-      </div>
-      <Form label-position="right" :label-width="100">
-        <FormItem label="旧的邮箱地址：">
-          <div>1535151019@qq.com</div>
-        </FormItem>
-        <FormItem label="新的邮箱地址：">
-          <Input style="width:200px;" />
-        </FormItem>
-      </Form>
-    </Modal>
-    <Modal class="modal" v-model="isPhone">
-      <div slot="header" class="modal-head">
-        <div>修改电话号码</div>
-      </div>
-      <Form label-position="right" :label-width="100">
-        <FormItem label="旧的电话号码：">
-          <div>13750416301</div>
-        </FormItem>
-        <FormItem label="新的电话号码：">
-          <Input style="width:200px;" />
-        </FormItem>
-      </Form>
-    </Modal>
-    <Modal class="modal" v-model="isName">
-      <div slot="header" class="modal-head">
-        <div>修改用户姓名</div>
-      </div>
-      <Form label-position="right" :label-width="100">
-        <FormItem label="旧的用户姓名：">
-          <div>蔡敏波</div>
-        </FormItem>
-        <FormItem label="新的用户姓名：">
-          <Input style="width:200px;" />
-        </FormItem>
-      </Form>
-    </Modal>
+    <h1 style="color:#2d8cf0;margin:10px 0;">作业统计</h1>
+    <Table class="homework-table" border :columns="homeworkColumns" :data="homeworkData" :height="500"></Table>
   </div>
 </template>
 
@@ -114,18 +62,6 @@ export default {
           width: 250
         },
         {
-          title: '状态',
-          key: 'status',
-          align: 'center',
-          render: (h, params) => {
-            return h('div', {
-              style: {
-                'color': 'green'
-              }
-            }, '进行中')
-          }
-        },
-        {
           title: '操作',
           align: 'center',
           render: (h, params) => {
@@ -135,10 +71,10 @@ export default {
               },
               on: {
                 click: () => {
-                  this.$router.push({ path: '/homework/homeworkDetail' })
+                  this.$router.push({ path: '/homework/homeworkStatis' })
                 }
               }
-            }, '查看')
+            }, '查看结果')
           }
         }
       ],
@@ -243,6 +179,10 @@ export default {
 <style lang="less" scoped>
 .homework {
   height: 700px;
+  h1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    padding-bottom: 8px;
+  }
 }
 .homework-tab {
   /deep/ .ivu-tabs-nav {

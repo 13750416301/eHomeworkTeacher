@@ -166,33 +166,33 @@ export default {
     color: #fff;
     background-color: rgba(255, 0, 0, 0.5);
   }
-}
-.choice {
-  width: 100%;
-  .choice-question {
-    margin-top: 10px;
-  }
-  .option {
-    margin-top: 8px;
-    .radio {
-      display: block;
-      margin-bottom: 8px;
+  .choice {
+    width: 100%;
+    .choice-question {
+      margin-top: 10px;
+    }
+    .option {
+      margin-top: 8px;
+      .radio {
+        display: block;
+        margin-bottom: 8px;
+      }
     }
   }
-}
-.shortAnswer {
-  width: 100%;
-  .shortAnswer-question {
+  .shortAnswer {
+    width: 100%;
+    .shortAnswer-question {
+      margin-top: 10px;
+    }
+    .shortAnswer-ans {
+      margin-top: 8px;
+    }
+  }
+  .submit-btn {
+    width: 100%;
+    height: auto;
     margin-top: 10px;
+    text-align: center;
   }
-  .shortAnswer-ans {
-    margin-top: 8px;
-  }
-}
-.submit-btn {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  text-align: center;
 }
 </style>
