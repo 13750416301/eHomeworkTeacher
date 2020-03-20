@@ -23,7 +23,7 @@
             <Table class="homework-table" border :columns="homeworkColumns" :data="homeworkData" :height="500"></Table>
         </TabPane>
         <TabPane label="已结束的作业" name="avator">
-          <Table class="homework-table" border :columns="homeworkColumns" :data="homeworkData" :height="500"></Table>
+          <Table class="homework-table" border :columns="homeworkColumns2" :data="homeworkData" :height="500"></Table>
           </TabPane>
     </Tabs>
   </div>
@@ -81,6 +81,50 @@ export default {
                 }
               }
             }, '查看')
+          }
+        }
+      ],
+      homeworkColumns2: [
+        {
+          title: '标题',
+          key: 'title'
+        },
+        {
+          title: '发布者',
+          key: 'publisher'
+        },
+        {
+          title: '开始时间',
+          key: 'beginTime'
+        },
+        {
+          title: '结束时间',
+          key: 'endTime'
+        },
+        {
+          title: '状态',
+          key: 'status',
+          render: (h, params) => {
+            return h('div', {
+              style: {
+                'color': 'green'
+              }
+            }, '进行中')
+          }
+        },
+        {
+          title: '操作',
+          render: (h, params) => {
+            return h('Button', {
+              props: {
+                type: 'primary'
+              },
+              on: {
+                click: () => {
+                  this.$router.push({ path: '/homework/homeworkCorrect' })
+                }
+              }
+            }, '批改')
           }
         }
       ],

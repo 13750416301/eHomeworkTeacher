@@ -12,7 +12,7 @@
     </div>
     <Modal v-model="isNew" width="800">
       <p slot="header" style="color:#2d8cf0;">
-        <span><Icon type="ios-add-circle" style="margin-right:5px;" />新建题目</span>
+        <span><Icon type="md-create" style="margin-right:5px;" />新建题目</span>
       </p>
       <div slot="footer" style="text-align:center">
         <Button @click="confirmAdd" type="primary" style="margin-right:10px;width:100px;">确认</Button>
